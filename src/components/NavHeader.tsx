@@ -1,4 +1,4 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const NavHeader = () => {
 
@@ -11,10 +11,6 @@ export const NavHeader = () => {
           <li><Link to="/contact">contact</Link></li>
         </ul>
       </nav>
-
-      <hr />
-      {/* outlet is where the contents of Link render */}
-      <Outlet />
     </div>
   )
 };

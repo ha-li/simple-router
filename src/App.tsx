@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import { NavHeader } from './components/NavHeader';
 import { Home } from './components/Home';
 import { About } from './components/About';
@@ -16,6 +16,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <hr />
+      {/* outlet is where the contents of Link render */}
+      <Outlet />
     </div>
   )
 }
