@@ -1,6 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { NavHeader } from './components/navigation/NavHeader';
-import { NavRoutes } from './components/navigation/NavRoutes';
+import { NavRoutes, NavHeader } from './components/Navigation';
 
 function App() {
 
@@ -11,11 +10,11 @@ function App() {
         <NavRoutes />
       </div>
 
-      {/* outlet is where the contents of Link render */}
+      {/* outlet is used by NavRoutes & NavHeader, & is where the contents of Link render */}
       <div>
         <Outlet />
       </div>
-      
+
     </div>
   )
 }
