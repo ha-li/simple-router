@@ -2,16 +2,16 @@ import { useParams } from "react-router-dom";
 import { catalog } from '../data/products'
 
 // the params type holds the id of the products/:id url
-type Params = {
+type ProductParams = {
   id: string;
 }
 
 export const ProductDetail = () => {
-  const params = useParams<Params>();
+  const params = useParams<ProductParams>();
   const id = params.id === undefined ? undefined : parseInt(params.id);
   console.log('customer id', params.id);
   
-  const product = catalog.find( 
+  const product = catalog.find ( 
     (item) => item.id === id
   );
 

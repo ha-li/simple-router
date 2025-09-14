@@ -1,18 +1,21 @@
 import { Outlet } from 'react-router-dom';
 import { NavRoutes, NavHeader } from './components/Navigation';
+import './App.css'
 
 function App() {
 
   return (
     <div>
-      <div>
-        <NavHeader />
+      <div className="container">
+        <aside>
+           <NavHeader />
+        </aside>
+        
         <NavRoutes />
-      </div>
-
-      {/* outlet is used by NavRoutes & NavHeader, & is where the contents of Link render */}
-      <div>
-        <Outlet />
+        
+        <main>
+         <Outlet />
+        </main>
       </div>
 
     </div>

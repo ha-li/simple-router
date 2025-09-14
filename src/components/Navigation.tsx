@@ -18,12 +18,12 @@ export const NavHeader = () => {
       <nav>
         <ul>
           <li><Link to="/">home</Link></li>
+
           <li><Link to="/about">about</Link></li>
           <li><Link to="/contact">contact</Link></li>
           <li><Link to="/product">product</Link></li>
         </ul>
       </nav>
-      <hr />
     </div>
   )
 };
@@ -33,7 +33,7 @@ export const NavRoutes = () => {
   return (
     <Routes>
       {/* / will load */}
-      <Route path="/" element={<Home />} errorElement={<ErrorPage /> }/>
+      <Route path="/" element={<Home />} errorElement={<ErrorPage />} />
       <Route path="/about" element={<About />} errorElement={<ErrorPage /> }/>
       <Route path="/contact" element={<Contact />} errorElement={<ErrorPage /> }/>
       <Route path="/product" element={<ProductsPage />} errorElement={<ErrorPage /> }/>
