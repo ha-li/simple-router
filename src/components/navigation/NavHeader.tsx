@@ -6,11 +6,13 @@ export const NavHeader = () => {
     <div>
       <nav>
         <ul>
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/">home</Link></li>
           <li><Link to="/about">about</Link></li>
           <li><Link to="/contact">contact</Link></li>
+          <li><Link to="/product">product</Link></li>
         </ul>
       </nav>
+      <hr />
     </div>
   )
 };

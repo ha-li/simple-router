@@ -1,24 +1,21 @@
-import { Routes, Route, Outlet } from 'react-router-dom';
-import { NavHeader } from './components/NavHeader';
-import { Home } from './components/Home';
-import { About } from './components/About';
-import { Contact } from './components/Contact';
-
+import { Outlet } from 'react-router-dom';
+import { NavHeader } from './components/navigation/NavHeader';
+import { NavRoutes } from './components/navigation/NavRoutes';
 
 function App() {
 
   return (
     <div>
-      <NavHeader />
-      <Routes>
-        {/* / will load */}
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <hr />
+      <div>
+        <NavHeader />
+        <NavRoutes />
+      </div>
+
       {/* outlet is where the contents of Link render */}
-      <Outlet />
+      <div>
+        <Outlet />
+      </div>
+      
     </div>
   )
 }
