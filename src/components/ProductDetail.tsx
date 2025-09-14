@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { catalog } from '../data/products'
 
 // the params type holds the id of the products/:id url
-type ProductParams = {
+interface ProductParams extends Record<string, string | undefined> {
   id: string;
 }
 
