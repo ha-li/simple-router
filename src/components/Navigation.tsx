@@ -1,5 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import { Home } from './Home';
+import { Login } from './Login'
 import { About } from './About';
 import { Contact } from './Contact';
 import { ProductsPage } from './ProductsPage'
@@ -12,13 +13,15 @@ import { ErrorPage, NotFoundPage } from './ErrorPage';
  * 2. NavRoutes - a standard react browser router
  */
 
+
+
 export const NavHeader = () => {
   return (
     <div>
       <nav>
         <ul>
-          <li><Link to="/">home</Link></li>
-
+          <li><Link to="/">login</Link></li>
+          <li><Link to="/home">home</Link></li>
           <li><Link to="/about">about</Link></li>
           <li><Link to="/contact">contact</Link></li>
           <li><Link to="/product">product</Link></li>
@@ -33,7 +36,8 @@ export const NavRoutes = () => {
   return (
     <Routes>
       {/* / will load */}
-      <Route path="/" element={<Home />} errorElement={<ErrorPage />} />
+      <Route path="/" element={<Login />} errorElement={<ErrorPage />} />
+      <Route path="/home" element={<Home />} errorElement={<ErrorPage />} />
       <Route path="/about" element={<About />} errorElement={<ErrorPage /> }/>
       <Route path="/contact" element={<Contact />} errorElement={<ErrorPage /> }/>
       <Route path="/product" element={<ProductsPage />} errorElement={<ErrorPage /> }/>
